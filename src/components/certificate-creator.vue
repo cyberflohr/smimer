@@ -182,6 +182,7 @@ export default Vue.extend({
         this.download(certKeyPair.privateKey, certificate, caCertificate);
       } catch (ex) {
         this.errorMessage = `${step} failed. ${ex}`;
+        console.error(ex);
       }
     },
     download(

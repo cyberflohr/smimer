@@ -9,6 +9,7 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "core-js": "^3.6.5",
     "@types/downloadjs": "^1.4.2",
     "@types/node-forge": "^0.9.4",
     "buefy": "^0.8.20",
@@ -23,6 +24,7 @@
     "@types/mocha": "^5.2.4",
     "@typescript-eslint/eslint-plugin": "^2.33.0",
     "@typescript-eslint/parser": "^2.33.0",
+    "@vue/cli-plugin-babel": "~4.4.0",
     "@vue/cli-plugin-eslint": "~4.4.0",
     "@vue/cli-plugin-typescript": "~4.4.0",
     "@vue/cli-plugin-unit-mocha": "~4.4.0",
@@ -59,7 +61,8 @@
     },
     "rules": {
       "@typescript-eslint/camelcase": "off",
-      "@typescript-eslint/no-use-before-define": "off"
+      "@typescript-eslint/no-use-before-define": "off",
+      "@typescript-eslint/ban-ts-ignore": "off"
     },
     "overrides": [
       {

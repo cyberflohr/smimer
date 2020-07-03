@@ -1,11 +1,15 @@
-import { asn1, pkcs12, pki } from "node-forge";
+import { asn1, pkcs12, pki, random } from "node-forge";
 import { Convert } from "pvtsutils";
 
-function getSerialNumber() {
-  const serialNumber = new Uint8Array(8);
-  window.crypto.getRandomValues(serialNumber);
-
-  return Convert.ToHex(serialNumber.buffer);
+function getSerialNumber(): Promise<string> {
+  return new Promise((resolve, reject) => {
+    // workaround for invalid node-forge type definition
+    // @ts-ignore
+    random.getBytes(8, (err, bytes) => {
+      if (err) reject(err);
+      resolve(bytes);
+    });
+  });
 }
 
 function getValidityPeriod(durationInDays: number) {
@@ -79,7 +83,7 @@ export async function createCertificate(
 ) {
   const cert = pki.createCertificate();
   cert.publicKey = certKeyPair.publicKey;
-  cert.serialNumber = getSerialNumber();
+  cert.serialNumber = await getSerialNumber();
   const validity = getValidityPeriod(validityPeriod);
   cert.validity.notBefore = validity.notBefore;
   cert.validity.notAfter = validity.notAfter;
