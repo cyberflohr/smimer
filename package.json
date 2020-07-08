@@ -9,10 +9,10 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
-    "core-js": "^3.6.5",
     "@types/downloadjs": "^1.4.2",
     "@types/node-forge": "^0.9.4",
     "buefy": "^0.8.20",
+    "core-js": "^3.6.5",
     "downloadjs": "^1.4.7",
     "node-forge": "^0.9.1",
     "pvtsutils": "^1.0.10",

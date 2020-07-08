@@ -15,6 +15,17 @@
     </section>
 
     <CertificateCreator />
+
+    <footer class="footer" style="margin-top: 30px;">
+      <div class="content has-text-centered">
+        <p>
+          <strong>SMIMEr</strong> by Wolfgang Flohr-Hochbichler. The
+          <a href="https://github.com/cyberflohr/smimer">source code</a> is
+          licensed under
+          <a href="http://opensource.org/licenses/mit-license.php">MIT</a>.
+        </p>
+      </div>
+    </footer>
   </div>
 </template>
 
