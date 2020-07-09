@@ -44,10 +44,7 @@
   "eslintConfig": {
     "root": true,
     "env": {
-      "node": true
-    },
-    "globals": {
-      "CryptoJS": true
+      "browser": true
     },
     "extends": [
       "plugin:vue/essential",
@@ -59,10 +56,12 @@
     "parserOptions": {
       "ecmaVersion": 2020
     },
+    "ignorePatterns": ["docs/**/*.js"],
     "rules": {
       "@typescript-eslint/camelcase": "off",
       "@typescript-eslint/no-use-before-define": "off",
-      "@typescript-eslint/ban-ts-ignore": "off"
+      "@typescript-eslint/ban-ts-ignore": "off",
+      "@typescript-eslint/no-explicit-any": "off"
     },
     "overrides": [
       {
@@ -70,6 +69,7 @@
           "**/__tests__/*.{j,t}s?(x)",
           "**/tests/unit/**/*.spec.{j,t}s?(x)"
         ],
+        "excludedFiles": "docs/**/*.js",
         "env": {
           "mocha": true
         }

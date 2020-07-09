@@ -64,7 +64,7 @@
           </b-field>
         </div>
         <div class="columns">
-          <b-field label="Password" class="column">
+          <b-field label="Password*" class="column">
             <ValidationInput
               rules="required|min:8"
               type="password"
@@ -74,7 +74,7 @@
             ></ValidationInput>
           </b-field>
 
-          <b-field label="Confirm Password" class="column">
+          <b-field label="Confirm Password*" class="column">
             <ValidationInput
               rules="required|min:8|confirmed:password"
               type="password"
@@ -88,7 +88,9 @@
           <strong>Security notice:</strong> All tasks (e.g. create key pair,
           certificate) are processed locally in your web browser. No information
           is sent to the internet. Please close the browser tab after you
-          created your certificate.
+          downloaded your certificate. Afterwards you can import the p12/pfx
+          file into your OS certificate store - keyChain Access (MacOS), certmgr
+          (Windows).
         </div>
 
         <div

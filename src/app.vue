@@ -31,12 +31,12 @@
 
 <script lang="ts">
 import Vue from "vue";
-import CertificateCreator from "./components/certificate-creator.vue";
+import CertificateForm from "./components/certificate-form.vue";
 
 export default Vue.extend({
   name: "App",
   components: {
-    CertificateCreator
+    CertificateCreator: CertificateForm
   },
   errorCaptured(err, vm, info) {
     console.error("error captured", err, vm, info);

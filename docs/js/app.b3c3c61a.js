@@ -384,7 +384,7 @@
                                 "b-field",
                                 {
                                   staticClass: "column",
-                                  attrs: { label: "Password" }
+                                  attrs: { label: "Password*" }
                                 },
                                 [
                                   o("ValidationInput", {
@@ -409,7 +409,7 @@
                                 "b-field",
                                 {
                                   staticClass: "column",
-                                  attrs: { label: "Confirm Password" }
+                                  attrs: { label: "Confirm Password*" }
                                 },
                                 [
                                   o("ValidationInput", {
@@ -436,7 +436,7 @@
                           o("div", [
                             o("strong", [e._v("Security notice:")]),
                             e._v(
-                              " All tasks (e.g. create key pair, certificate) are processed locally in your web browser. No information is sent to the internet. Please close the browser tab after you created your certificate. "
+                              " All tasks (e.g. create key pair, certificate) are processed locally in your web browser. No information is sent to the internet. Please close the browser tab after you downloaded your certificate. Afterwards you can import the p12/pfx file into your OS certificate store - keyChain Access (MacOS), certmgr (Windows). "
                             )
                           ]),
                           o(
@@ -613,8 +613,8 @@
       const n = l["pkcs12"].toPkcs12Asn1(e, [a, o], t, { algorithm: "3des" });
       return l["asn1"].toDer(n).getBytes();
     }
-    const h = o("aeb1"),
-      y = o.n(h),
+    const y = o("aeb1"),
+      h = o.n(y),
       g = [
         { Code: "AF", Name: "Afghanistan" },
         { Code: "AX", Name: "Åland Islands" },
@@ -924,8 +924,8 @@
           ])
         });
       },
-      I = [],
-      P = {
+      A = [],
+      I = {
         components: { ValidationProvider: S["b"] },
         props: {
           vid: { type: String },
@@ -947,13 +947,13 @@
           this.value && (this.innerValue = this.value);
         }
       },
-      A = P,
-      B = o("2877"),
-      O = Object(B["a"])(A, M, I, !1, null, null, null),
-      T = O.exports,
-      w = t["a"].extend({
+      P = I,
+      O = o("2877"),
+      B = Object(O["a"])(P, M, A, !1, null, null, null),
+      w = B.exports,
+      T = t["a"].extend({
         name: "CertificateCreator",
-        components: { ValidationObserver: S["a"], ValidationInput: T },
+        components: { ValidationObserver: S["a"], ValidationInput: w },
         props: { msg: String },
         data: function() {
           return {
@@ -1042,7 +1042,7 @@
             });
           },
           download: function(e, a, o) {
-            y()(v(e, a, o, this.password), this.email + ".p12");
+            h()(v(e, a, o, this.password), this.email + ".p12");
           }
         },
         computed: {
@@ -1051,8 +1051,8 @@
           }
         }
       }),
-      G = w,
-      k = Object(B["a"])(G, r, d, !1, null, null, null),
+      G = T,
+      k = Object(O["a"])(G, r, d, !1, null, null, null),
       j = k.exports,
       _ = t["a"].extend({
         name: "App",
@@ -1062,13 +1062,13 @@
         }
       }),
       K = _,
-      E = (o("fffb"), Object(B["a"])(K, n, i, !1, null, null, null)),
+      E = (o("fffb"), Object(O["a"])(K, n, i, !1, null, null, null)),
       R = E.exports,
       V = o("1361"),
       L = o("c2cd"),
       U = o("ee4c"),
-      z = o("f921"),
-      x = o("bac5"),
+      x = o("f921"),
+      z = o("bac5"),
       F = (o("5abe"), o("4c93"));
     Object(S["c"])(
       "required",
@@ -1092,8 +1092,8 @@
       t["a"].use(V["a"]),
       t["a"].use(L["a"]),
       t["a"].use(U["a"]),
-      t["a"].use(z["a"]),
       t["a"].use(x["a"]),
+      t["a"].use(z["a"]),
       (t["a"].config.productionTip = !1),
       new t["a"]({
         render: function(e) {
@@ -1108,4 +1108,4 @@
     n.a;
   }
 });
-//# sourceMappingURL=app.27e26a55.js.map
+//# sourceMappingURL=app.b3c3c61a.js.map

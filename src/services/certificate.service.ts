@@ -1,5 +1,4 @@
 import { asn1, pkcs12, pki, random } from "node-forge";
-import { Convert } from "pvtsutils";
 
 function getSerialNumber(): Promise<string> {
   return new Promise((resolve, reject) => {
