@@ -15,7 +15,6 @@
     "core-js": "^3.6.5",
     "downloadjs": "^1.4.7",
     "node-forge": "^0.9.1",
-    "pvtsutils": "^1.0.10",
     "vee-validate": "^3.3.6",
     "vue": "^2.6.11"
   },
@@ -56,7 +55,9 @@
     "parserOptions": {
       "ecmaVersion": 2020
     },
-    "ignorePatterns": ["docs/**/*.js"],
+    "ignorePatterns": [
+      "docs/**/*.js"
+    ],
     "rules": {
       "@typescript-eslint/camelcase": "off",
       "@typescript-eslint/no-use-before-define": "off",
