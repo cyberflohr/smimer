@@ -90,7 +90,7 @@
           is sent to the internet. Please close the browser tab after you
           downloaded your certificate. Afterwards you can import the p12/pfx
           file into your OS certificate store - keyChain Access (MacOS), certmgr
-          (Windows).
+          (Windows) and delete the downloaded file.
         </div>
 
         <div

@@ -7,7 +7,7 @@
             S/MIME certificate creator
           </h1>
           <h2 class="subtitle">
-            Create your own self signed S/MIME certificate for secure e-mail
+            Create your own signed S/MIME certificate for secure e-mail
             communication.
           </h2>
         </div>
