@@ -14,7 +14,7 @@
     "buefy": "^0.8.20",
     "core-js": "^3.6.5",
     "downloadjs": "^1.4.7",
-    "node-forge": "^0.9.1",
+    "node-forge": "^0.10.0",
     "vee-validate": "^3.3.6",
     "vue": "^2.6.11"
   },
